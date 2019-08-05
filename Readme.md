@@ -13,14 +13,17 @@ https://github.com/SatyabrataKundu/DockeriseSpringDataRest.git
 First open PGAdmin, create a database named `FnD`. Then, open `src/main/resources/application.properties` file and change the spring datasource username and password as per your PostgreSQL installation.
 
 ## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+```
 spring.datasource.url=jdbc:postgresql://localhost:5432/FnD
 spring.datasource.username= postgres
 spring.datasource.password=postgres
 
-# The SQL dialect makes Hibernate generate better SQL for the chosen database
+### The SQL dialect makes Hibernate generate better SQL for the chosen database
+```
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
 
-# Hibernate ddl auto (create, create-drop, validate, update)
+### Hibernate ddl auto (create, create-drop, validate, update)
+```
 spring.jpa.hibernate.ddl-auto = update
 spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true 
 
@@ -40,14 +43,18 @@ java -jar target/FnD-POC-JPA-DATA-REST-0.0.1-SNAPSHOT.jar
 **3. RUN the DOCKERISE APP**
 First open PGAdmin, create a database named `FnD`. Then, open `src/main/resources/application.properties` file and change the spring datasource username and password as per your PostgreSQL installation.
 
-## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+### Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+```
 spring.datasource.url=jdbc:postgresql://db:5432/FnD
 spring.datasource.username= postgres
 spring.datasource.password=postgres
 
-
+### Using Docker-compose file
+```
 spring-boot-postgresql-jpa-hibernate-rest-api-demo-master\Dockerize>docker-compose up
 
+### Sample Output
+```
 Building db
 Step 1/5 : FROM postgres:latest
  ---> 53912975086f
@@ -87,6 +94,8 @@ WARNING: Image for service web was built because it did not already exist. To re
 Creating dockerize_db_1 ... done
 Creating dockerize_web_1 ... done
 Attaching to dockerize_db_1, dockerize_web_1
+### Docker logs
+```
 db_1   | 2019-08-02 17:31:18.484 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
 db_1   | 2019-08-02 17:31:18.484 UTC [1] LOG:  listening on IPv6 address "::", port 5432
 db_1   | 2019-08-02 17:31:18.739 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
