@@ -10,7 +10,7 @@
 	<packaging>jar</packaging>
 
 	<name>DockeriseSpringDataRest</name>
-	<description>FnD-POC-JPA-DATA-REST</description>
+	<description>FnD-POC-JPA-DATA-REST-DOCKER</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
