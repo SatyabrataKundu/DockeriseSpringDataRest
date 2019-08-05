@@ -38,6 +38,13 @@ mvn clean package
 java -jar target/FnD-POC-JPA-DATA-REST-0.0.1-SNAPSHOT.jar
 ```
 **3. RUN the DOCKERISE APP**
+First open PGAdmin, create a database named `FnD`. Then, open `src/main/resources/application.properties` file and change the spring datasource username and password as per your PostgreSQL installation.
+
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+spring.datasource.url=jdbc:postgresql://db:5432/FnD
+spring.datasource.username= postgres
+spring.datasource.password=postgres
+
 
 spring-boot-postgresql-jpa-hibernate-rest-api-demo-master\Dockerize>docker-compose up
 
