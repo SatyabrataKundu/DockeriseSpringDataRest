@@ -94,7 +94,7 @@ WARNING: Image for service web was built because it did not already exist. To re
 Creating dockerize_db_1 ... done
 Creating dockerize_web_1 ... done
 Attaching to dockerize_db_1, dockerize_web_1
-
+```
 ### Docker logs
 ```
 db_1   | 2019-08-02 17:31:18.484 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
@@ -102,7 +102,6 @@ db_1   | 2019-08-02 17:31:18.484 UTC [1] LOG:  listening on IPv6 address "::", p
 db_1   | 2019-08-02 17:31:18.739 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
 db_1   | 2019-08-02 17:31:19.284 UTC [22] LOG:  database system was shut down at 2019-08-02 17:08:19 UTC
 db_1   | 2019-08-02 17:31:20.037 UTC [1] LOG:  database system is ready to accept connections
-```
 web_1  |
 web_1  |   .   ____          _            __ _ _
 web_1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
