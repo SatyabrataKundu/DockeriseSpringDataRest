@@ -5,12 +5,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>FnD-POC-JPA-DATA-REST</artifactId>
+	<artifactId>DockeriseSpringDataRest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>postgres-demo1</name>
-	<description>Demo project for Spring Boot</description>
+	<name>DockeriseSpringDataRest</name>
+	<description>FnD-POC-JPA-DATA-REST</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
