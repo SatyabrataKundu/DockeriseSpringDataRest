@@ -1,0 +1,29 @@
+version: '3.1'
+
+volumes:
+  database_data:
+    driver: local
+
+services:
+  db:
+    build: .
+    hostname: db
+    restart: always
+    environment:
+      POSTGRES_DB: FnD
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres 
+    ports:
+      - 5432:5432
+    volumes:
+      - database_data:/var/lib/postgresql/data
+
+  web:
+    build: ../
+    hostname: web
+    expose:
+      - 4004
+    ports:
+      - 8080:8080
+    links:
+      - db
